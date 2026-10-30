@@ -1,43 +1,84 @@
 
 body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+     color: #222;
+    background-color: #ffffff;
+
+
+
   background-image: url('imagenes/fondoweb.png');
    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
 
-nav {
-    background-color: #2c3e50;
-    padding: 15px;
-    margin-left: 30px;
-}
-nav a{
-    color: white;
-    text-decoration: none;
-    margin-right: 25px;
-    font-size: 22px;
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: 600;
-}
-
-
-
-.logo{
-    height: 90px;
-    width: auto;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   background-size: cover;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
-    background-color: #2d3f53;
+    background-color: #4a3b75;
     padding: 10px 20px;
 }
 
+.logo{
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+
+
+nav {
+    display: flex;
+   
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 22px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #62518f;
+}
+
+nav a.activo {
+    background-color: white;
+    color: #4a3b75;
+}
+
+
+
+
+/* ===== PORTADA PRINCIPAL ===== */
+
+
+
+
+
+
 .hero{
-    height: 600px;
+
+     min-height: 520px;
     background-image: url("imagenes/planta.jpg");
     background-size: cover;
     background-position: center;
@@ -45,41 +86,61 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.hero-texto{
+    padding: 40px 20px;
+    background-repeat: no-repeat;
     text-align: center;
 }
 
+/* Contenedor del texto */
+
+.hero-texto {
+   
+    text-align: center;
+}
+
+/* Título principal */
+
+
 .hero-texto h1{
     font-size: 70px;
-    color: #00a651;
+     color: #00a651;
     font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Descripción */
+
 .hero-texto p{
     font-size: 28px;
     color: white;
+     line-height: 1.6;
     font-family: 'Segoe UI', sans-serif;
 }
 
-.hero-texto h1{
-     color: #00a651;
-    font-size: 70px;
-}
+
 
 .hero-texto span{
   
      color: white;
+
+
+
+
+
+/* ===== QUIÉNES SOMOS ===== */
+
+
 }
 .quienes-somos{
     max-width: 1000px;
     margin: 80px auto;
     padding: 0 30px;
     text-align: center;
+    padding: 35px 30px;
+    border-radius: 12px;
 }
+    
 
 .quienes-somos h2{
     font-size: 42px;
@@ -88,49 +149,61 @@ header{
     font-family: 'Segoe UI', sans-serif;
 }
 
+
 .quienes-somos p{
     font-size: 22px;
     line-height: 1.8;
-    color:black
+    color:black;
     font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 20px;
 }
+
+
 .frase-final{
-    font-size: 28px;
+    font-size: 50px;
     color: #00a651;
     font-weight: bold;
     margin-top: 40px;
+    text-align: center;
+    margin: 50px 20px;
 }
-footer{
+
+
+footer {
     background-color: #4a3b75;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    padding: 40px;
-    margin-top: 100px;
+    padding: 40px 25px;
+    margin-top: 80px;
 
-    color: white; 
+    color: white;
 }
-.footer-logo img{
+
+.footer-logo img {
     height: 100px;
+    width: auto;
 }
-.footer-columna{
+
+.footer-columna {
     text-align: center;
 }
 
-.footer-columna h3{
-    font-size: 24px;
+.footer-columna h3 {
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
-.footer-columna p{
-    font-size: 18px;
+.footer-columna p {
+    font-size: 16px;
     line-height: 1.6;
 }
 
-
-.whatsapp-float{
+.whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -138,7 +211,7 @@ footer{
     width: 60px;
     height: 60px;
 
-    background: #25D366;
+    background-color: #25D366;
     color: white;
 
     border-radius: 50%;
@@ -148,12 +221,13 @@ footer{
     align-items: center;
 
     font-size: 32px;
-
     text-decoration: none;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
 }
 
-.whatsapp-float:hover{
+.whatsapp-float:hover {
     transform: scale(1.1);
 }
+ 
