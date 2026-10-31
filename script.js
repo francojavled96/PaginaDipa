@@ -61,3 +61,42 @@ botonAnterior.addEventListener("click", function() {
     mostrarImagen();
 
 });
+
+// ===== VALIDACIÓN DEL FORMULARIO =====
+
+// 1. Buscamos el formulario
+const formulario = document.querySelector("#formulario-contacto");
+
+// 2. Comprobamos que el formulario exista
+if (formulario) {
+
+    formulario.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const nombre = document.querySelector("#nombre").value;
+      const nombreLimpio = nombre.trim();
+
+      let errorNombre = "";
+
+          if (nombreLimpio === "") {
+               errorNombre = "El nombre es obligatorio.";
+              }
+
+
+              else if (nombreLimpio.length < 3) {
+    errorNombre = "El nombre debe tener al menos 3 caracteres.";
+}
+           
+             document.querySelector("#error-nombre").textContent = errorNombre;
+
+      const empresa = document.querySelector("#empresa").value;
+      const email = document.querySelector("#email").value;
+      const telefono = document.querySelector("#telefono").value;
+      const servicio = document.querySelector("#servicio").value;
+      const mensaje = document.querySelector("#mensaje").value;
+
+});
+
+
+}
