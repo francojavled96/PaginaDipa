@@ -492,4 +492,61 @@ footer {
     .frase-final {
         font-size: 22px;
     }
+
+    .carrusel-contenedor {
+    gap: 8px;
+}
+
+.carrusel-contenedor img {
+    height: 240px;
+}
+
+.carrusel-contenedor button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+}
+}
+
+.carrusel {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.carrusel h2 {
+    color: #4a3b75;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carrusel-contenedor img {
+    width: 100%;
+    max-width: 850px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carrusel-contenedor button {
+    background-color: #4a3b75;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.carrusel-contenedor button:hover {
+    background-color: #62518f;
 }

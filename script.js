@@ -193,15 +193,61 @@ if (formulario) {
             formularioValido = false;
         }
 
+// ===== COMPROBACIÓN FINAL =====
 
-        // ===== COMPROBACIÓN FINAL =====
-
-        if (formularioValido === false) {
-            return;
-        }
-
-        console.log("¡Formulario válido!");
-
-    });
-
+if (formularioValido === false) {
+    return;
 }
+
+
+// ===== CREACIÓN DEL RESUMEN =====
+
+// 1. Buscamos el contenedor
+const resumen = document.querySelector("#resumen-envio");
+
+// 2. Limpiamos el resumen anterior
+resumen.textContent = "";
+
+// 3. Creamos un título
+const tituloResumen = document.createElement("h3");
+
+tituloResumen.textContent = "¡Consulta enviada correctamente!";
+
+// 4. Creamos una lista
+const listaResumen = document.createElement("ul");
+
+// 5. Creamos los elementos de la lista
+
+const datos = [
+    "Nombre: " + nombreLimpio,
+    "Empresa: " + (empresaLimpia || "No especificada"),
+    "Email: " + emailLimpio,
+    "Teléfono: " + telefonoLimpio,
+    "Servicio: " + document.querySelector("#servicio").selectedOptions[0].textContent,
+    "Mensaje: " + mensajeLimpio
+];
+
+// 6. Recorremos los datos
+
+datos.forEach(function(dato) {
+
+    const elemento = document.createElement("li");
+
+    elemento.textContent = dato;
+
+    listaResumen.appendChild(elemento);
+
+});
+
+// 7. Incorporamos los elementos al HTML
+
+resumen.appendChild(tituloResumen);
+resumen.appendChild(listaResumen);
+
+// 8. Limpiamos el formulario
+
+formulario.reset();
+
+}); // Cierre del evento submit
+
+} // Cierre del if formulario
