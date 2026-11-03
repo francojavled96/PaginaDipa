@@ -32,13 +32,12 @@ if (imagenCarrusel && botonAnterior && botonSiguiente) {
     let indiceActual = 0;
 
     // 5. Creamos una función para mostrar la imagen
-    function mostrarImagen() {
+    const mostrarImagen = function() {
 
-        imagenCarrusel.src = imagenes[indiceActual].src;
-        imagenCarrusel.alt = imagenes[indiceActual].alt;
+    imagenCarrusel.src = imagenes[indiceActual].src;
+    imagenCarrusel.alt = imagenes[indiceActual].alt;
 
-    }
-
+};
     // 6. Programamos el botón siguiente
     botonSiguiente.addEventListener("click", function() {
 
@@ -171,7 +170,7 @@ if (formulario) {
 
         // ===== VALIDACIÓN DEL MENSAJE =====
 
-        const servicio = document.querySelector("#servicio").value;
+       
         const mensaje = document.querySelector("#mensaje").value;
         const mensajeLimpio = mensaje.trim();
 

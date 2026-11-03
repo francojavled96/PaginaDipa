@@ -1,51 +1,46 @@
 
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-     color: #222;
+    color: #222;
     background-color: #ffffff;
 
-
-
-  background-image: url('imagenes/fondoweb.png');
-   background-repeat: no-repeat;
-
-   background-position: center;
-   background-size: cover;
-   background-attachment: fixed;
-   
+    background-image: url('imagenes/fondoweb.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
-header{
+header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 15px;
     background-color: #4a3b75;
     padding: 10px 20px;
 }
 
-.logo{
+.logo {
     height: 90px;
     width: auto;
-    max-width: 100%;
+    flex-shrink: 0;
 }
-
 
 /* ===== MENÚ DE NAVEGACIÓN ===== */
 
-
 nav {
     display: flex;
-   
     align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 12px;
-    
+    gap: 8px;
 }
 
-nav a{
+
+nav a {
     color: white;
     text-decoration: none;
     font-size: 22px;
@@ -65,19 +60,10 @@ nav a.activo {
     color: #4a3b75;
 }
 
-
-
-
 /* ===== PORTADA PRINCIPAL ===== */
 
-
-
-
-
-
-.hero{
-
-     min-height: 520px;
+.hero {
+    min-height: 520px;
     background-image: url("imagenes/fondoweb.png");
     background-size: cover;
     background-position: center;
@@ -90,76 +76,63 @@ nav a.activo {
     text-align: center;
 }
 
-/* Contenedor del texto */
+/* CONTENEDOR DEL TEXTO */
 
 .hero-texto {
-   
     text-align: center;
     max-width: 1000px;
     padding: 25px;
 }
 
-/* Título principal */
+/* TÍTULO PRINCIPAL */
 
-
-.hero-texto h1{
+.hero-texto h1 {
     font-size: 70px;
-     color: #00a651;
+    color: #00a651;
     font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Descripción */
+/* DESCRIPCIÓN */
 
-.hero-texto p{
+.hero-texto p {
     font-size: 28px;
     color: white;
-     line-height: 1.6;
+    line-height: 1.6;
     font-family: 'Segoe UI', sans-serif;
 }
 
-
-
-.hero-texto span{
-  
-     color: white;
-
-
-
-
+.hero-texto span {
+    color: white;
+}
 
 /* ===== QUIÉNES SOMOS ===== */
 
-
-}
-.quienes-somos{
+.quienes-somos {
     max-width: 1000px;
     margin: 80px auto;
     text-align: center;
     padding: 35px 30px;
     border-radius: 12px;
 }
-    
 
-.quienes-somos h2{
+.quienes-somos h2 {
     font-size: 42px;
     color: #00a651;
     margin-bottom: 30px;
     font-family: 'Segoe UI', sans-serif;
 }
 
-
-.quienes-somos p{
+.quienes-somos p {
     font-size: 22px;
     line-height: 1.8;
-    color:black;
+    color: black;
     font-family: 'Segoe UI', sans-serif;
     margin-bottom: 20px;
 }
 
-
-.frase-final{
+.frase-final {
     font-size: 50px;
     color: #00a651;
     font-weight: bold;
@@ -168,6 +141,7 @@ nav a.activo {
     margin: 50px 20px;
 }
 
+/* ===== PIE DE PÁGINA ===== */
 
 footer {
     background-color: #4a3b75;
@@ -203,6 +177,8 @@ footer {
     line-height: 1.6;
 }
 
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -230,7 +206,8 @@ footer {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
- 
+
+/* ===== PÁGINA DE SERVICIOS ===== */
 
 .titulo-servicios {
     max-width: 1000px;
@@ -253,30 +230,45 @@ footer {
 /* CONTENEDOR DE LOS SERVICIOS */
 
 .contenedor-servicios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
+.contenedor-servicios h2 {
+    text-align: center;
+}
+
+/* DISTRIBUCIÓN DE LAS CUATRO TARJETAS */
+
+.lista-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
 /* CADA TARJETA */
 
 .servicio {
-    flex: 1 1 450px;
-    max-width: 550px;
+    flex: 0 0 calc((100% - 25px) / 2);
+    box-sizing: border-box;
+    min-width: 0;
+
     background-color: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* IMÁGENES DE LOS SERVICIOS */
+
 .servicio img {
-    width: 100%;
-    height: 250px;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -421,92 +413,7 @@ footer {
     background-color: #62518f;
 }
 
-/* ===== ADAPTACIÓN A CELULARES ===== */
-
-@media (max-width: 768px) {
-
-    /* ENCABEZADO */
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    /* PORTADA */
-    .hero {
-        min-height: 400px;
-    }
-
-    .hero-texto h1 {
-        font-size: 38px;
-    }
-
-    .hero-texto p {
-        font-size: 19px;
-    }
-
-    /* QUIÉNES SOMOS */
-    .quienes-somos {
-        margin: 40px 15px;
-        padding: 25px 20px;
-    }
-
-    .quienes-somos h2 {
-        font-size: 30px;
-    }
-
-    .quienes-somos p {
-        font-size: 17px;
-    }
-
-    /* SERVICIOS */
-    .servicio {
-        flex-basis: 100%;
-    }
-
-    .servicio img {
-        height: 200px;
-    }
-
-    /* FORMULARIO */
-    .seccion-formulario {
-        width: calc(100% - 30px);
-        box-sizing: border-box;
-        padding: 20px;
-    }
-
-    /* FOOTER */
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .frase-final {
-        font-size: 22px;
-    }
-
-    .carrusel-contenedor {
-    gap: 8px;
-}
-
-.carrusel-contenedor img {
-    height: 240px;
-}
-
-.carrusel-contenedor button {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-}
-}
+/* ===== CARRUSEL ===== */
 
 .carrusel {
     max-width: 1100px;
@@ -549,4 +456,109 @@ footer {
 
 .carrusel-contenedor button:hover {
     background-color: #62518f;
+}
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+
+@media (max-width: 768px) {
+
+    /* ENCABEZADO */
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    /* PORTADA */
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-texto h1 {
+        font-size: 38px;
+    }
+
+    .hero-texto p {
+        font-size: 19px;
+    }
+
+    /* QUIÉNES SOMOS */
+
+    .quienes-somos {
+        margin: 40px 15px;
+        padding: 25px 20px;
+    }
+
+    .quienes-somos h2 {
+        font-size: 30px;
+    }
+
+    .quienes-somos p {
+        font-size: 17px;
+    }
+
+    /* SERVICIOS */
+
+    .lista-servicios {
+        gap: 15px;
+    }
+
+    .servicio {
+        flex: 0 0 calc((100% - 15px) / 2);
+        padding: 10px;
+    }
+
+  
+    .servicio h2 {
+        font-size: 18px;
+    }
+
+    .servicio p {
+        font-size: 14px;
+    }
+
+    /* FORMULARIO */
+
+    .seccion-formulario {
+        width: calc(100% - 30px);
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .frase-final {
+        font-size: 22px;
+    }
+
+    /* CARRUSEL */
+
+    .carrusel-contenedor {
+        gap: 8px;
+    }
+
+    .carrusel-contenedor img {
+        height: 240px;
+    }
+
+    .carrusel-contenedor button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
 }
