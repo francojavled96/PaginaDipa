@@ -563,3 +563,607 @@ footer {
         font-size: 18px;
     }
 }
+
+
+/* =========================================
+   PAGINA CLIENTES
+========================================= */
+
+
+/* PRESENTACION */
+
+.clientes-portada {
+    background-color: #4a3b75;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.clientes-portada h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.clientes-portada p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* SECTORES */
+
+.clientes-sectores {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.clientes-sectores h2,
+.clientes-eleccion h2,
+.clientes-trayectoria h2,
+.clientes-compromiso h2,
+.clientes-contacto h2 {
+    color: #4a3b75;
+    margin-bottom: 20px;
+}
+
+.clientes-introduccion {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.clientes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cliente-card {
+    flex: 0 0 calc((100% - 50px) / 3);
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cliente-card h3 {
+    color: #4a3b75;
+    margin: 18px 0 10px;
+}
+
+.cliente-card p {
+    line-height: 1.6;
+}
+
+
+/* LOGOTIPOS FICTICIOS */
+
+.logo-cliente {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.simbolo-cliente {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nombre-cliente {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* IDENTIDAD DE CADA MARCA */
+
+.logo-metalnor {
+    color: #34495e;
+}
+
+.logo-metalnor .simbolo-cliente {
+    background-color: #34495e;
+}
+
+.logo-obranza {
+    color: #b66b25;
+}
+
+.logo-obranza .simbolo-cliente {
+    background-color: #b66b25;
+    border-radius: 8px;
+}
+
+.logo-agrovial {
+    color: #36834c;
+}
+
+.logo-agrovial .simbolo-cliente {
+    background-color: #36834c;
+}
+
+.logo-translog {
+    color: #4a3b75;
+}
+
+.logo-translog .simbolo-cliente {
+    background-color: #4a3b75;
+    border-radius: 8px;
+}
+
+.nota-clientes {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* POR QUE NOS ELIGEN */
+
+.clientes-eleccion {
+    padding: 50px 20px;
+    background-color: #f4f4f7;
+    text-align: center;
+}
+
+.eleccion-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.eleccion-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 25px 18px;
+    background-color: white;
+    border-radius: 10px;
+    border-top: 4px solid #00a651;
+}
+
+.eleccion-card h3 {
+    color: #4a3b75;
+    margin-bottom: 12px;
+}
+
+.eleccion-card p {
+    line-height: 1.6;
+}
+
+
+/* TRAYECTORIA */
+
+.clientes-trayectoria {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.anio-trayectoria {
+    color: #00a651;
+    font-size: 58px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.clientes-trayectoria h3 {
+    color: #4a3b75;
+    margin-bottom: 15px;
+}
+
+.clientes-trayectoria > p:last-child {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* COMPROMISO AMBIENTAL */
+
+.clientes-compromiso {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #f4f4f7;
+}
+
+.clientes-compromiso p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* CONTACTO */
+
+.clientes-contacto {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.clientes-contacto p {
+    margin-bottom: 25px;
+}
+
+.boton-clientes {
+    display: inline-block;
+    background-color: #00a651;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boton-clientes:hover {
+    background-color: #008b43;
+}
+
+
+/* ADAPTACION A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+
+    .clientes-portada {
+        padding: 45px 18px;
+    }
+
+    .clientes-portada h1 {
+        font-size: 26px;
+    }
+
+    .cliente-card {
+        flex: 0 0 calc((100% - 25px) / 2);
+    }
+
+    .eleccion-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .cliente-card,
+    .eleccion-card {
+        flex: 0 0 100%;
+    }
+
+    .nombre-cliente {
+        font-size: 20px;
+    }
+
+    .anio-trayectoria {
+        font-size: 48px;
+    }
+
+}
+
+/* ===== PAGINA TECNOLOGIA ===== */
+
+.tecnologia-portada {
+    background-color: #4a3b75;
+    color: white;
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.tecnologia-portada h1 {
+    margin-bottom: 20px;
+}
+
+.tecnologia-portada p {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.tecnologia-maquinaria,
+.tecnologia-transporte {
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.tecnologia-maquinaria h2,
+.tecnologia-transporte h2 {
+    color: #4a3b75;
+    margin-bottom: 15px;
+}
+
+.tecnologia-introduccion {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.tecnologia-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tecnologia-card {
+    background-color: #f4f4f4;
+    border-left: 5px solid #00a651;
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1 1 280px;
+    max-width: 340px;
+    text-align: left;
+}
+
+.tecnologia-card h3 {
+    color: #4a3b75;
+    margin-bottom: 12px;
+}
+
+.tecnologia-card p {
+    line-height: 1.6;
+}
+
+.tecnologia-cierre {
+    background-color: #4a3b75;
+    color: white;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.tecnologia-cierre p {
+    max-width: 800px;
+    margin: 15px auto 25px;
+    line-height: 1.7;
+}
+
+.boton-tecnologia {
+    display: inline-block;
+    background-color: #00a651;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+.boton-tecnologia:hover {
+    background-color: #008f45;
+}
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .tecnologia-portada,
+    .tecnologia-maquinaria,
+    .tecnologia-transporte,
+    .tecnologia-cierre {
+        padding: 30px 15px;
+    }
+
+    .tecnologia-card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+}
+/* ===== PAGINA GESTION DE RESIDUOS ===== */
+
+.gestion-portada {
+    background-color: #4a3b75;
+    color: white;
+    text-align: center;
+    padding: 65px 25px;
+}
+
+.gestion-etiqueta {
+    color: #00a651;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.gestion-portada h1 {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 36px;
+}
+
+.gestion-portada > p:last-child {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.gestion-introduccion {
+    max-width: 850px;
+    margin: 60px auto 45px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.gestion-introduccion h2 {
+    color: #4a3b75;
+    margin-bottom: 15px;
+}
+
+.gestion-introduccion p {
+    line-height: 1.8;
+}
+
+/* RECORRIDO DE LAS ETAPAS */
+
+.gestion-recorrido {
+    max-width: 950px;
+    margin: 0 auto 70px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.gestion-etapa {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.gestion-etapa:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 34px;
+    top: 75px;
+    bottom: 0;
+    width: 3px;
+    background-color: #00a651;
+}
+
+.gestion-numero {
+    background-color: #00a651;
+    color: white;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.gestion-contenido {
+    padding-top: 5px;
+}
+
+.gestion-subtitulo {
+    color: #00a651;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gestion-contenido h2 {
+    color: #4a3b75;
+    margin: 8px 0 12px;
+}
+
+.gestion-contenido p {
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* COMPROMISO AMBIENTAL */
+
+.gestion-compromiso {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 55px 25px;
+}
+
+.gestion-compromiso h2 {
+    color: #4a3b75;
+    margin-bottom: 18px;
+}
+
+.gestion-compromiso p:last-child {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CIERRE Y CONTACTO */
+
+.gestion-contacto {
+    background-color: #4a3b75;
+    color: white;
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.gestion-contacto h2 {
+    margin-bottom: 15px;
+}
+
+.gestion-contacto p {
+    margin-bottom: 25px;
+}
+
+.boton-gestion {
+    display: inline-block;
+    background-color: #00a651;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+.boton-gestion:hover {
+    background-color: #008f45;
+}
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .gestion-portada {
+        padding: 45px 20px;
+    }
+
+    .gestion-portada h1 {
+        font-size: 28px;
+    }
+
+    .gestion-introduccion {
+        margin: 40px auto;
+    }
+
+    .gestion-etapa {
+        gap: 18px;
+        padding-bottom: 35px;
+    }
+
+    .gestion-numero {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        font-size: 18px;
+    }
+
+    .gestion-etapa:not(:last-child)::after {
+        left: 26px;
+        top: 60px;
+    }
+
+    .gestion-contenido h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* FONDO EXCLUSIVO DE GESTION DE RESIDUOS */
+
+.pagina-gestion {
+    background-image: none;
+    background-color: #f5f5f5;
+}
