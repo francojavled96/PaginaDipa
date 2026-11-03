@@ -104,6 +104,24 @@ if (formulario) {
             formularioValido = false;
         }
 
+        // ===== MENSAJE DINÁMICO DEL NOMBRE =====
+
+document.querySelector("#nombre").addEventListener("input", function() {
+
+    const nombreActual = this.value.trim();
+    let nuevoError = "";
+
+    if (nombreActual === "") {
+        nuevoError = "El nombre es obligatorio.";
+    }
+    else if (nombreActual.length < 3) {
+        nuevoError = "El nombre debe tener al menos 3 caracteres.";
+    }
+
+    document.querySelector("#error-nombre").textContent = nuevoError;
+
+});
+
 
         // ===== VALIDACIÓN DE LA EMPRESA =====
 
@@ -191,6 +209,18 @@ if (formulario) {
         if (errorMensaje !== "") {
             formularioValido = false;
         }
+
+
+
+// ===== VALIDACIÓN DEL SERVICIO =====
+
+const servicio = document.querySelector("#servicio").value;
+
+if (servicio === "") {
+    formularioValido = false;
+}
+
+
 
 // ===== COMPROBACIÓN FINAL =====
 
